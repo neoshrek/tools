@@ -93,6 +93,6 @@ python jwt_decode.py --file "C:/Users/Mac/tokens/token.txt"
 python jwt_decode.py --token <jwt> --output-dir "C:/Users/Mac/reports"
 ```
 
----
+## Testing
 
-*Author: Mac | Version: 1.0.0 | Date: 2026-05-14*
+A set of pre-built test tokens and a step-b

@@ -21,7 +21,3 @@ Each tool in this repository:
 - Is self-contained in a single script where possible
 - Includes clear setup and usage instructions in its own README
 - Is free to use, fork, and adapt
-
-## Adding More Tools
-
-Each tool lives

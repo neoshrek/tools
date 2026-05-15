@@ -1,0 +1,118 @@
+# ============================================================
+# drive-backup — Configuration
+# ============================================================
+
+# Root source directory on your local machine.
+# Windows users: forward slashes work and are easiest to read.
+#   source_root: "C:/Development"
+# Backslashes also work if quoted:
+#   source_root: "C:\\Development"
+source_root: "C:/Development"
+
+# Root destination directory.
+# Works with any mounted drive — Google Drive (G:), OneDrive, a NAS, or USB.
+#   destination_root: "G:/My Drive/Backup/Development"
+destination_root: "G:/My Drive/Backup/Development"
+
+# ============================================================
+# Top-level exclusions
+#
+# Folder names listed here are skipped only at the FIRST level of directories
+# directly under source_root. Use this to exclude entire project folders by
+# name (e.g. a large archive or a temporary sandbox).
+#
+# To filter folders and files at ANY depth in the tree, use the ignore rules
+# section below instead — that is the correct place for things like
+# node_modules, .git, build, and similar artefacts.
+# ============================================================
+exclude_top_level: []
+  # - OldProjects
+  # - Sandbox
+
+# ============================================================
+# Deleted files behaviour
+#
+# Controls what happens when a file or folder exists in the destination but
+# has since been deleted from the source. Three options:
+#
+#   untouched — destination is left exactly as-is. Deleted source files are
+#               kept in the backup. Safe default — nothing is ever removed.
+#
+#   delete    — files and folders removed from source are permanently deleted
+#               from the destination. The deletion is logged with [DELETED].
+#               Use with caution; consider running --dry-run first.
+#
+#   markfile  — files and folders removed from source are renamed with a
+#               "deleted-" prefix (e.g. report.pdf becomes deleted-report.pdf).
+#               They remain visible in the backup but are set aside and will
+#               not be re-processed on subsequent runs. Logged with [MARKED].
+#
+# If this field is empty or omitted the default is untouched.
+# ============================================================
+deleted_files: untouched
+
+# ============================================================
+# Ignore Rules
+#
+# Applied at EVERY level of the directory tree — to both folder names and
+# file names, at any depth. Supports:
+#   - Exact names:     node_modules, .git, public
+#   - Glob patterns:   *.log, .env.*, *.tmp
+#
+# This is different from exclude_top_level (see above), which only applies
+# to the first level of directories under source_root.
+# ============================================================
+ignore:
+  # Dependency / build artefacts (often large)
+  - node_modules
+  - .next
+  - .turbo
+  - dist
+  - build
+  - .cache
+  - __pycache__
+  - .venv
+  - venv
+
+  # Version control
+  - .git
+  - .svn
+
+  # Static / generated assets
+  - public
+
+  # Environment / secret files — uncomment lines below to exclude
+  # - .env.production
+  # - .env.local
+  # - "*.env"
+  # - ".env.*"
+
+  # Logs and temp files
+  - "*.log"
+  - "*.tmp"
+  - "*.temp"
+
+# ============================================================
+# Log file
+#
+# Path to the log file (relative to this config file, or absolute).
+# Remove or leave blank to log to console only.
+# The log file is automatically excluded from the backup even if it sits
+# inside source_root — no need to add it to the ignore rules.
+# ============================================================
+log_file: "copy_log.txt"
+
+# Maximum size of a single log file in megabytes before it rotates.
+# Two backup files are kept alongside the active log, so total disk use
+# is at most log_max_size_mb x 3.
+# Default is 10 MB. Set to a higher value for very large backup runs.
+log_max_size_mb: 10
+
+# ============================================================
+# Dry run
+#
+# Set to true to simulate the backup without writing, copying, or deleting
+# any files. Logs exactly what would happen. Can also be enabled at runtime
+# with the --dry-run flag.
+# ============================================================
+dry_run: false

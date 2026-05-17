@@ -95,4 +95,21 @@ python jwt_decode.py --token <jwt> --output-dir "C:/Users/Mac/reports"
 
 ## Testing
 
-A set of pre-built test tokens and a step-b
+A set of pre-built test tokens and a step-by-step guide are included in the `test-tokens/` folder:
+
+```
+test-tokens/
+  1_no_exp.txt           — HS256 token, no expiry claim
+  2_active_with_exp.txt  — HS256 token, active expiry, array claims, iat/nbf/exp
+  3_expired.txt          — HS256 token, expired 3 days ago
+  4_hs384.txt            — HS384 token, active expiry
+  5_rs256_asymmetric.txt — RS256 token (asymmetric, signature skipped)
+  6_malformed.txt        — Broken token (only two parts)
+  TESTING.md             — Exact commands and expected output for all 8 tests
+```
+
+The secret used to sign tokens 1–4 is `testsecret`. Open `TESTING.md` for the full test checklist.
+
+---
+
+*Author: Mac | Version: 1.1.0 | Date: 2026-05-15*

@@ -84,4 +84,10 @@ Each report contains the following sections:
 
 - Lines starting with `#` are treated as comments and skipped
 - Blank lines are skipped
-- Variables
+- Variables and values are split on the **first** `=` sign only — values containing `=` characters are handled correctly (e.g. `SECRET=abc==base64` → variable: `SECRET`, value: `abc==base64`)
+- Surrounding quotes are stripped from values (both `"` and `'`)
+- Lines with no `=` sign are flagged as malformed in the report rather than silently dropped
+
+---
+
+*Author: Mac | Version: 1.1.0 | Date: 2026-05-15*

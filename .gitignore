@@ -1,0 +1,58 @@
+# =============================================================================
+# .gitignore — tools repository
+# =============================================================================
+
+# ── Editor ───────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ── Python bytecode ──────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Python packaging ─────────────────────────────────────────────────────────
+*.egg-info/
+*.egg
+dist/
+build/
+
+# ── Test / lint caches ───────────────────────────────────────────────────────
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# ── Tool output files ────────────────────────────────────────────────────────
+# env-diff generated reports (output dir is user-configured)
+env_compared_*.md
+env_compared_*.pdf
+
+# jwt-decode generated reports
+jwt_decoded_*.md
+jwt_decoded_*.pdf
+
+# drive-backup log files
+copy_log.txt
+copy_log.txt.*
+
+# ── Sensitive files — do not commit ──────────────────────────────────────────
+.env
+.env.*
+*.env
+token.txt
+tokens/
+
+# ── OS noise ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini

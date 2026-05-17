@@ -112,4 +112,4 @@ The secret used to sign tokens 1–4 is `testsecret`. Open `TESTING.md` for the 
 
 ---
 
-*Author: Mac | Version: 1.1.0 | Date: 2026-05-15*
+*Author: Mac | Version: 1.1.0 | Date: 2026-05-17*

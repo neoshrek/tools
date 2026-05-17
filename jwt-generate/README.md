@@ -83,4 +83,4 @@ python jwt_generate.py --secret mysecretkey --out "C:\tokens\token.txt"
 
 ---
 
-*Author: Mac | Version: 1.0.0 | Date: 2026-05-15*
+*Author: Mac | Version: 1.0.0 | Date: 2026-05-17*

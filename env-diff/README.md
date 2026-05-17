@@ -90,4 +90,4 @@ Each report contains the following sections:
 
 ---
 
-*Author: Mac | Version: 1.1.0 | Date: 2026-05-15*
+*Author: Mac | Version: 1.1.0 | Date: 2026-05-17*

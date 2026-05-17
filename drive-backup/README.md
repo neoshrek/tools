@@ -107,7 +107,7 @@ Recommended before the first real run and before enabling `delete` mode.
 Each run prints a summary line showing counts for every category:
 
 ```
-2026-05-14 16:30:01 [INFO] Done in 4.2s — 12 copied — 384 unchanged — 7 files skipped — 3 dirs skipped — 2 files marked — 0 errors
+2026-05-17 16:30:01 [INFO] Done in 4.2s — 12 copied — 384 unchanged — 7 files skipped — 3 dirs skipped — 2 files marked — 0 errors
 ```
 
 Log tags used throughout the run:
@@ -124,4 +124,4 @@ Log tags used throughout the run:
 
 ---
 
-*Author: Mac | Version: 1.0.0 | Date: 2026-05-14*
+*Author: Mac | Version: 1.0.0 | Date: 2026-05-17*

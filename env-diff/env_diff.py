@@ -2,7 +2,7 @@
 # Tool:        env-diff
 # Author:      Mac
 # Version:     1.1.0
-# Date:        2026-05-15
+# Date:        2026-05-17
 # Repository:  https://github.com/mac/tools
 #
 # Description:

@@ -2,7 +2,7 @@
 # Tool:        drive-backup
 # Author:      Mac
 # Version:     1.0.0
-# Date:        2026-05-14
+# Date:        2026-05-17
 # Repository:  https://github.com/mac/tools
 #
 # Description:
